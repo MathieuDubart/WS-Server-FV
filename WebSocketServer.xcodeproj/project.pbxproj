@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		611C4ADB2CC7C4F300351126 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611C4ADA2CC7C4F300351126 /* main.swift */; };
+		611C4AE32CC7C5AB00351126 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 611C4AE22CC7C5AB00351126 /* Swifter */; };
+		611C4B062CC7E7F300351126 /* TerminalCommandExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611C4B052CC7E7F300351126 /* TerminalCommandExecutor.swift */; };
+		611C4B082CC7EAD100351126 /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611C4B072CC7EAD100351126 /* WebSocketServer.swift */; };
+		61C4E18B2CC8F6FC00603EB9 /* ImagePrompting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4E18A2CC8F6FC00603EB9 /* ImagePrompting.swift */; };
+		61C4E18D2CC8FB5C00603EB9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4E18C2CC8FB5C00603EB9 /* Utilities.swift */; };
+		61C4E18F2CC8FE3E00603EB9 /* TmpFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C4E18E2CC8FE3E00603EB9 /* TmpFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,11 @@
 /* Begin PBXFileReference section */
 		611C4AD72CC7C4F300351126 /* WebSocketServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WebSocketServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		611C4ADA2CC7C4F300351126 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		611C4B052CC7E7F300351126 /* TerminalCommandExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalCommandExecutor.swift; sourceTree = "<group>"; };
+		611C4B072CC7EAD100351126 /* WebSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketServer.swift; sourceTree = "<group>"; };
+		61C4E18A2CC8F6FC00603EB9 /* ImagePrompting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePrompting.swift; sourceTree = "<group>"; };
+		61C4E18C2CC8FB5C00603EB9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		61C4E18E2CC8FE3E00603EB9 /* TmpFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611C4AE32CC7C5AB00351126 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +69,22 @@
 		611C4AD92CC7C4F300351126 /* WebSocketServer */ = {
 			isa = PBXGroup;
 			children = (
+				61C4E1892CC8F6F200603EB9 /* Model */,
 				611C4ADA2CC7C4F300351126 /* main.swift */,
+				611C4B052CC7E7F300351126 /* TerminalCommandExecutor.swift */,
+				611C4B072CC7EAD100351126 /* WebSocketServer.swift */,
+				61C4E18C2CC8FB5C00603EB9 /* Utilities.swift */,
+				61C4E18E2CC8FE3E00603EB9 /* TmpFileManager.swift */,
 			);
 			path = WebSocketServer;
+			sourceTree = "<group>";
+		};
+		61C4E1892CC8F6F200603EB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61C4E18A2CC8F6FC00603EB9 /* ImagePrompting.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +103,9 @@
 			dependencies = (
 			);
 			name = WebSocketServer;
+			packageProductDependencies = (
+				611C4AE22CC7C5AB00351126 /* Swifter */,
+			);
 			productName = WebSocketServer;
 			productReference = 611C4AD72CC7C4F300351126 /* WebSocketServer */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 611C4ACE2CC7C4F200351126;
+			packageReferences = (
+				611C4AE12CC7C5AB00351126 /* XCRemoteSwiftPackageReference "swifter" */,
+			);
 			productRefGroup = 611C4AD82CC7C4F300351126 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611C4B082CC7EAD100351126 /* WebSocketServer.swift in Sources */,
+				611C4B062CC7E7F300351126 /* TerminalCommandExecutor.swift in Sources */,
+				61C4E18B2CC8F6FC00603EB9 /* ImagePrompting.swift in Sources */,
+				61C4E18D2CC8FB5C00603EB9 /* Utilities.swift in Sources */,
 				611C4ADB2CC7C4F300351126 /* main.swift in Sources */,
+				61C4E18F2CC8FE3E00603EB9 /* TmpFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,10 +284,13 @@
 		611C4ADF2CC7C4F300351126 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G739VH73FZ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -259,10 +298,13 @@
 		611C4AE02CC7C4F300351126 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G739VH73FZ;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -289,6 +331,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		611C4AE12CC7C5AB00351126 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		611C4AE22CC7C5AB00351126 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 611C4AE12CC7C5AB00351126 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 611C4ACF2CC7C4F200351126 /* Project object */;
 }
